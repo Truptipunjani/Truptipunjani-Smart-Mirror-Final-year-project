@@ -1,0 +1,55 @@
+pm2 setup starting - Sun Apr 25 02:11:10 IST 2021
+using parameter bash
+system is Linux raspberrypi 5.10.17-v7+ #1403 SMP Mon Feb 22 11:29:51 GMT 2021 armv7l GNU/Linux
+the os is Distributor ID: Raspbian Description: Raspbian GNU/Linux 10 (buster) Release: 10 Codename: buster
+node version v10.24.0
+force installing latest npm version via npm
+npm version 7.11.1
+pm2 installed
+get the pm2 platform specific startup command
+startup command = sudo env PATH=$PATH:/usr/bin:/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
+[PM2] Init System found: systemd
+Platform systemd
+Template
+[Unit]
+Description=PM2 process manager
+Documentation=https://pm2.keymetrics.io/
+After=network.target
+
+[Service]
+Type=forking
+User=pi
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+Environment=PATH=$PATH:/usr/bin:/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+Environment=PM2_HOME=/home/pi/.pm2
+PIDFile=/home/pi/.pm2/pm2.pid
+Restart=on-failure
+
+ExecStart=/usr/local/lib/node_modules/pm2/bin/pm2 resurrect
+ExecReload=/usr/local/lib/node_modules/pm2/bin/pm2 reload all
+ExecStop=/usr/local/lib/node_modules/pm2/bin/pm2 kill
+
+[Install]
+WantedBy=multi-user.target
+
+Target path
+/etc/systemd/system/pm2-pi.service
+Command list
+[ 'systemctl enable pm2-pi' ]
+[PM2] Writing init configuration in /etc/systemd/system/pm2-pi.service
+[PM2] Making script booting at startup...
+[PM2] [-] Executing: systemctl enable pm2-pi...
+[PM2] [v] Command successfully executed.
++---------------------------------------+
+[PM2] Freeze a process list on reboot via:
+$ pm2 save
+
+[PM2] Remove init script via:
+$ pm2 unstartup systemd
+pm2 startup command done
+configure the pm2 config file for MagicMirror
+start MagicMirror via pm2 now
+save MagicMirror pm2 config now
+pm2 setup completed - Sun Apr 25 02:11:44 IST 2021
