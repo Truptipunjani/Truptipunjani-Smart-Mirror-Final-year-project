@@ -1,0 +1,96 @@
+
+Upgrade started - Sun Apr 25 02:07:24 IST 2021
+system is Linux raspberrypi 5.10.17-v7+ #1403 SMP Mon Feb 22 11:29:51 GMT 2021 armv7l GNU/Linux
+the os is Distributor ID: Raspbian Description: Raspbian GNU/Linux 10 (buster) Release: 10 Codename: buster
+doing test run = true, NO updates will be applied!
+
+saving custom.css
+remote name = origin
+upgrading from version 2.15.0 to 2.15.0
+fetching latest revisions
+git fetch rc=0
+current branch = master
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   fonts/package-lock.json
+	modified:   installers/mm.sh
+	modified:   package-lock.json
+	modified:   package.json
+	modified:   vendor/package-lock.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	0
+	css/save_custom.css
+	installers/pm2_MagicMirror.json
+	run-start.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+there are 5 local files that are different than the master repo
+
+   fonts/package-lock.json
+   installers/mm.sh
+   package-lock.json
+   package.json
+   vendor/package-lock.json
+
+save/restore files selection = y
+erasing lock files
+Saved working directory and index state WIP on master: 491f5aa Merge pull request #2510 from MichMich/develop
+test merge result rc='' , if empty, no conflicts
+skipping merge, only test run
+downloading dumpactivemodules script
+
+processing dependency changes for active modules with package.json files
+processing for module MMM-GoogleAssistant please wait
+----------------------------------
+skipped processing for MMM-GoogleAssistant, doing test run
+processing complete for module MMM-GoogleAssistant
+restoring custom.css
+removing git alias
+test run, restoring files stashed
+Removing vendor/package-lock.json
+Removing package-lock.json
+Removing fonts/package-lock.json
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    fonts/package-lock.json
+	modified:   installers/mm.sh
+	deleted:    package-lock.json
+	modified:   package.json
+	deleted:    vendor/package-lock.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	0
+	installers/pm2_MagicMirror.json
+	run-start.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (5487850cfff73240bc850727ed80afa040d54917)
+Upgrade ended - Sun Apr 25 02:07:39 IST 2021
+
+Upgrade started - Sun Apr 25 02:10:34 IST 2021
+system is Linux raspberrypi 5.10.17-v7+ #1403 SMP Mon Feb 22 11:29:51 GMT 2021 armv7l GNU/Linux
+the os is Distributor ID: Raspbian Description: Raspbian GNU/Linux 10 (buster) Release: 10 Codename: buster
+user requested to apply changes
+doing test run = false
+
+saving custom.css
+remote name = origin
+local version 2.15.0 already same as master 2.15.0
+restoring custom.css
+removing git alias
+Upgrade ended - Sun Apr 25 02:10:35 IST 2021
